@@ -154,6 +154,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           assert.isTrue(dialog.noCancelOnOutsideClick, 'noCancelOnOutsideClick is true');
         });
 
+        test('modal dialog has no-cancel-on-esc-key', function() {
+          var dialog = fixture('modal');
+          assert.isTrue(dialog.noCancelOnEscKey, 'noCancelOnEscKey is true');
+        });
+
+        test('with-backdrop is restored after toggling modal', function() {
+          var dialog = fixture('modal');
+          dialog.setAttribute('with-backdrop', '');
+          dialog.modal = false;
+          assert.isTrue(dialog.withBackdrop, 'withBackdrop is true');
+        });
+
+        test('no-cancel-on-outside-click is restored after toggling modal', function() {
+          var dialog = fixture('modal');
+          dialog.setAttribute('no-cancel-on-outside-click', '');
+          dialog.modal = false;
+          assert.isTrue(dialog.noCancelOnOutsideClick, 'noCancelOnOutsideClick is true');
+        });
+
+        test('no-cancel-on-esc-key is restored after toggling modal', function() {
+          var dialog = fixture('modal');
+          dialog.setAttribute('no-cancel-on-esc-key', '');
+          dialog.modal = false;
+          assert.isTrue(dialog.noCancelOnEscKey, 'noCancelOnEscKey is true');
+        });
+
         test('clicking outside a modal dialog does not move focus from dialog', function(done) {
           var dialog = fixture('modal');
           runAfterOpen(dialog, function() {
