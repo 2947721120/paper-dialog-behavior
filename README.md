@@ -17,7 +17,7 @@ _[演示API文档](https://elements.polymer-project.org/elements/paper-dialog-be
 ##聚合物对话框
 
 
-Use `Polymer.PaperDialogBehavior` and `paper-dialog-shared-styles.html` 实施材料设计对话
+使用 `Polymer.PaperDialogBehavior` 和 `paper-dialog-shared-styles.html` 实施材料设计对话
 
 例如，如果`<paper-dialog-impl>` 实现这一行为：
 
